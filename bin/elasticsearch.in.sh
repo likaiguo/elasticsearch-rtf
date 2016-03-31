@@ -13,10 +13,12 @@ fi
 ES_CLASSPATH="$ES_HOME/lib/elasticsearch-2.2.0.jar:$ES_HOME/lib/*"
 
 if [ "x$ES_MIN_MEM" = "x" ]; then
-    ES_MIN_MEM=256m
+#    ES_MIN_MEM=256m
+    ES_MIN_MEM=8g
 fi
 if [ "x$ES_MAX_MEM" = "x" ]; then
-    ES_MAX_MEM=1g
+#    ES_MAX_MEM=1g
+    ES_MAX_MEM=8g
 fi
 if [ "x$ES_HEAP_SIZE" != "x" ]; then
     ES_MIN_MEM=$ES_HEAP_SIZE
